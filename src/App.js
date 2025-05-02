@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import EntryForm from './components/EntryForm';
+import Dashboard from './components/Dashboard';
+import KidsData from './components/KidsData';
+import { KidsProvider } from './context/KidsContext';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <KidsProvider>
+      <Router>
+        <div className="App">
+          <header className="app-header">
+              <h1>Astro Jumping Park</h1>
+          </header>
+          <nav className="navigation">
+            <Link to="/" className="nav-link">Registro</Link>
+            <Link to="/dashboard" className="nav-link">Tablero</Link>
+          </nav>
+          
+          <Routes>
+            <Route path="/" element={<EntryForm />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/data" element={<KidsData />} />
+          </Routes>
+        </div>
+      </Router>
+    </KidsProvider>
   );
 }
 
