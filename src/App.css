@@ -54,6 +54,8 @@ h1 {
 
 .entry-form label {
   margin-bottom: 5px;
+  background-color: #00011f;
+  background-transparent: 5px;
 }
 
 .entry-form input {

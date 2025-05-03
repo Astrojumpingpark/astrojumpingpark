@@ -57,6 +57,7 @@ export function KidsProvider({ children }) {
         totaltime: newKid.totalTime,
         payment: newKid.payment || 0,
         starttime: new Date().toISOString(),
+        numberOfChildren: newKid.numberOfChildren,
         inactive: false  // Add this field
       };
 

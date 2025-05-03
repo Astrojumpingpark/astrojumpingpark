@@ -7,6 +7,7 @@ function EntryForm() {
   const [parentName, setParentName] = useState('');
   const [totalTime, setTotalTime] = useState('');
   const [payment, setPayment] = useState('');
+  const [numberOfChildren, setNumberOfChildren] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +16,8 @@ function EntryForm() {
       parentName: parentName,
       totalTime: parseInt(totalTime),
       payment: parseFloat(payment),
-      startTime: new Date().toISOString()
+      startTime: new Date().toISOString(),
+      numberOfChildren: parseInt(numberOfChildren)
     };
 
     await handleAddKid(newKid);
@@ -25,12 +27,22 @@ function EntryForm() {
     setParentName('');
     setTotalTime('');
     setPayment('');
+    setNumberOfChildren('');
   };
 
   return (
     <div className="entry-form">
       <h2 className="titulo2">Registro de niños</h2>
         <form onSubmit={handleSubmit}>
+        <div>
+          <label>Cantidad de niños:</label>
+          <input
+            type="number"
+            value={numberOfChildren}
+            onChange={(e) => setNumberOfChildren(e.target.value)}
+            required
+          />
+        </div>
         <div>
           <label>Nombre del niño:</label>
           <input
