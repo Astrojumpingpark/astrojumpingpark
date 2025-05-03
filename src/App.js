@@ -4,6 +4,7 @@ import EntryForm from './components/EntryForm';
 import Dashboard from './components/Dashboard';
 import KidsData from './components/KidsData';
 import InactiveKids from './components/InactiveKids';
+import Statistics from './components/Statistics';
 import { KidsProvider } from './context/KidsContext';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
             <Link to="/" className="nav-link">Preparando despegue</Link>
             <Link to="/dashboard" className="nav-link">En vuelo</Link>
             <Link to="/inactive" className="nav-link">Aterrizajes</Link>
+            <Link to="/stats" className="nav-link">Estadísticas</Link>
           </nav>
           
           <Routes>
@@ -26,6 +28,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/data" element={<KidsData />} />
             <Route path="/inactive" element={<InactiveKids />} />
+            <Route path="/stats" element={<Statistics />} />
           </Routes>
         </div>
       </Router>
