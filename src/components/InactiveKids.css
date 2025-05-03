@@ -1,0 +1,57 @@
+.inactive-kids {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo2 {
+    text-align: center;
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 3px 5px;
+    background-color: #00011f;
+    border-radius: 4px;
+  }
+
+.table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.inactive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.inactive-table th,
+.inactive-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.inactive-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+}
+
+.inactive-table tr:last-child td {
+  border-bottom: none;
+}
+
+.inactive-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
